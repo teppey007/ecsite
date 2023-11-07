@@ -1,0 +1,37 @@
+#wrapper {
+    color: #62e2dc;
+  }
+  
+  #wrapper .back_btn {
+    display: block;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  #wrapper .back_btn:link, #wrapper .back_btn:hover, #wrapper .back_btn:visited, #wrapper .back_btn:active {
+    color: #62e2dc;
+    text-decoration: none;
+  }
+  
+  #wrapper .conteiner {
+    width: 80%;
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 1rem 0;
+    border: 2px solid #62e2dc;
+    border-radius: 10px;
+  }
+  
+  #wrapper .conteiner h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 480px) {
+    #wrapper .conteiner h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
