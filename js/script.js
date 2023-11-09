@@ -60,21 +60,30 @@ window.onload = function () {
       });
     });
   
+    // カートボタンがクリックされたときにどのアイテムのボタンがアクティブ化されているかを確認
+    // カートに追加されたアイテムの数を表示
     function activate_btn(index) {
       cart_cnt++;
+      // カートにアイテムが1つ以上ある場合、カートアイコンを表示
       if( cart_cnt >= 1 ){
         cart_cnt_icon.parentNode.classList.remove('hidden');
       }
+      // カートに追加されたアイテムの総数を表示
       cart_cnt_icon.innerHTML = cart_cnt;
+      // アクティブなカートボタンのスタイルを変更
       cart_btns[index].classList.add('item_cart_btn_active');
     }
   
+    // 指定されたアイテムのカートボタンを非アクティブ化
     function inactivate_btn(index) {
+      // カートに追加されたアイテムの総数を表示
       cart_cnt--;
+      // カートにアイテムが1つもない場合に実行
       if(cart_cnt == 0){
         cart_cnt_icon.parentNode.classList.add('hidden');
       }
       cart_cnt_icon.innerHTML = cart_cnt;
+      // アイテムのカートボタンを非アクティブ化
       cart_btns[index].classList.remove('item_cart_btn_active');
     }
   

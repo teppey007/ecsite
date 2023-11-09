@@ -1,14 +1,12 @@
 
 
-.hidden {
-    display: none;
-  }
+
   
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: orange;
+    background-color: rgb(250, 193, 88);
     padding: 0.5rem;
   }
   
@@ -22,6 +20,7 @@
     position: relative;
   }
   
+  /* カートに入れられたアイテム数の表示デザイン */
   header .cart .cart_cnt {
     position: absolute;
     top: -4px;
@@ -37,45 +36,56 @@
   }
   
   header .cart .cart_icon img {
-    width: 40px;
+    width: 50px;
   }
   
   #wrapper {
     width: 100%;
   }
   
+  /* アイテム全体の余白調整 */
   .item_wrapper {
     margin: 2rem;
   }
   
   .item_wrapper .item_list {
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+    flex-wrap: wrap;/*画面幅に合わせて折り返し*/
+    list-style: none;/*リストアイテムの箇条書きを非表示*/
   }
   
+  /* 商品リストのデザイン */
   .item_wrapper .item_list .item {
-    width: calc(100% / 4 - 1rem);
+    width: calc(100% / 4 - 1rem);/*要素の幅を計算　幅（100%）を4等分し、1レムを引いた値*/
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 5px;
-    border: 2px solid #62e2dc;
+    border: 2px solid #62bee2;
     box-sizing: border-box;
-    color: #62e2dc;
+    color: #62bee2;
   }
   
+
+  /*レスポンシブデザイン  メディアクエリ*/
+  /*画面の幅が768ピクセル以下の場合  */
+  /*幅は親要素の幅を2等分し、1レムを引いた値 */
   @media screen and (max-width: 768px) {
     .item_wrapper .item_list .item {
       width: calc(100% / 2 - 1rem);
     }
   }
   
+
+  /*画面の幅が480ピクセル以下の場合  */
+  /*幅は親要素の幅を100％にする */
   @media screen and (max-width: 480px) {
     .item_wrapper .item_list .item {
       width: 100%;
     }
   }
   
+
+  /* 商品リスト内の各アイテムに対して、画像のスタイル（サイズと配置） */
   .item_wrapper .item_list .item .item_img {
     width: 56%;
     margin: 1rem  auto;
@@ -83,69 +93,85 @@
     /* object-fit: cover; */
   }
   
+ 
   .item_wrapper .item_list .item .item_img img {
     width: 100%;
   }
-  
+
+   /* 価格のスタイル（右寄せとフォントサイズ） */
   .item_wrapper .item_list .item .item_price {
     text-align: right;
     font-size: 1.5rem;
   }
   
+  /* 価格内の「円」シンボルのフォントサイズ */
   .item_wrapper .item_list .item .item_price .yen_symbol {
     font-size: 1.7rem;
   }
   
+
+  /* ボタンのスタイル */
   .item_wrapper .item_list .item .item_btnarea {
     display: flex;
     justify-content: space-around;
     margin: 0.5rem 0;
   }
   
+  /* カートボタンのテキストのスタイル、背景色、形状 */
   .item_wrapper .item_list .item .item_btnarea .item_cart_btn {
     padding: 4px 1.2rem;
     font-size: 1.2rem;
     color: #fff;
-    background-color: #62e2dc;
+    background-color: #62bee2;
     border: none;
     border-radius: 20px;
     outline: none;
   }
   
+
+  /*レスポンシブデザイン  メディアクエリ*/
+  /*画面の幅が1000ピクセル以下の場合  */
   @media screen and (max-width: 1000px) {
     .item_wrapper .item_list .item .item_btnarea .item_cart_btn {
       font-size: 0.8rem;
     }
   }
   
+  /*画面の幅が768ピクセル以下の場合  */
   @media screen and (max-width: 768px) {
     .item_wrapper .item_list .item .item_btnarea .item_cart_btn {
       font-size: 1.2rem;
     }
   }
   
+
+  /* カートボタンがアクティブになったときのスタイル変更 */
   .item_wrapper .item_list .item .item_btnarea .item_cart_btn_active {
     background-color: #f5d883 !important;
   }
   
+  /* 購入ボタンのテキストのスタイル、背景色、形状 */
   .item_wrapper .item_list .item .item_btnarea .item_buy_btn {
     padding: 4px 1.2rem;
     font-size: 1.2rem;
     line-height: 1.5;
     color: #fff;
     text-align: center;
-    background-color: #62e2dc;
+    background-color: #62bee2;
     border: none;
     border-radius: 20px;
     text-decoration: none;
   }
   
+  /*レスポンシブデザイン  メディアクエリ*/
+  /*画面の幅が1000ピクセル以下の場合  */
   @media screen and (max-width: 1000px) {
     .item_wrapper .item_list .item .item_btnarea .item_buy_btn {
       font-size: 0.8rem;
     }
   }
-  
+
+  /*画面の幅が768ピクセル以下の場合  */
   @media screen and (max-width: 768px) {
     .item_wrapper .item_list .item .item_btnarea .item_buy_btn {
       font-size: 1.2rem;
